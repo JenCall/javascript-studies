@@ -1,0 +1,45 @@
+12.02.23 - Relevant topics: 
+
+1) Phases of JavaScript (creation and execution):
+
+During the execution phase, the JS engine executes the code line by line, evaluating and executing statements. Phases: 
+1.	creating the global and function execution contexts, 
+2.	creating the scope chain, and 
+3.	allocating memories for the variables and functions. 
+
+2) Hoisting:
+
+Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope, prior to execution of the code.
+
+3) Lexical Scope:
+
+JavaScript uses lexical scoping to resolve the variable names when a function is created inside another function. It determines the function's parent scope by looking at where the function was created instead of where it was invoked.
+
+4) Scope Chain:
+
+The scope chain is used to resolve the value of variable names in JavaScript. Without a scope chain the JavaScript engine wouldn't know which value to pick for a certain variable name if there are multiple defined at different scopes.
+
+
+5) Module Pattern (IIFE) and singleton (single instance):
+Module pattern in javascript refers to the modularisation of code for a common mechanism. It works quite well to split one "class" across several files as you can define constructor and various groups of prototype methods independently. Each of the modules is usually wrapped inside a closure to create static, local variables - this is called revealing module pattern.
+Singleton pattern in javascript refers to the restriction of instance creations, often using lazy initialisation.
+Of course you can consider the module pattern to be a specialisation of the singleton pattern (see the Wikipedia article), the constructor and its prototype object would take the part of the "single instance" then.
+Yet you also could combine them "independently": A module that defines a class which uses the singleton approach.
+
+- Factory function (Multiple instances)
+- function expression vs function declaration, 
+- variable declaration, 
+- Function Arguments (local var ??)
+
+Closure:
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
+function init() {
+  var name = "Mozilla"; // name is a local variable created by init
+  function displayName() {
+    // displayName() is the inner function, that forms the closure
+    console.log(name); // use variable declared in the parent function
+  }
+  displayName();
+}
+init();
