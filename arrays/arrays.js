@@ -51,3 +51,19 @@ let fruits_4 = ['banana', 'orange', 'grape'];
 fruits_4.unshift('apple');
 
 console.log(fruits_4); // Output: ['apple', 'banana', 'orange', 'grape']
+
+// filter() 
+// to create a new array with all the elements that pass a certain test provided by a callback function.
+
+let numbers_4 = [1, 2, 3, 4, 5];
+let evenNumbers = numbers_4.filter(function(number) {
+  return number % 2 === 0;
+});
+
+console.log(evenNumbers); // Output: [2, 4]
+
+// arrow function syntax for the callback function
+let numbers_5 = [1, 2, 3, 4, 5];
+let evenNumbers_2 = numbers_5.filter(number => number % 2 === 0);
+
+console.log(evenNumbers_2); // Output: [2, 4]
