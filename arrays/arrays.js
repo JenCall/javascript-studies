@@ -44,3 +44,10 @@ let numbers_3 = [1, 2, 3, 4, 5];
 numbers_3.shift();
 
 console.log(numbers_3); // Output: [2, 3, 4, 5]
+
+// unshift()
+// to add one or more elements to the beginning of an array.
+let fruits_4 = ['banana', 'orange', 'grape'];
+fruits_4.unshift('apple');
+
+console.log(fruits_4); // Output: ['apple', 'banana', 'orange', 'grape']
